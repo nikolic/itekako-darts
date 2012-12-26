@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :participation do
-    player_id ""
-    game_id ""
-    position ""
+    player_id 1
+    game_id 1
+    position 1
   end
 end

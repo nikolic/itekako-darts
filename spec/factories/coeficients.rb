@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :coeficient do
-    value ""
+    value 1
   end
 end
