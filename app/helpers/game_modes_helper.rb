@@ -1,0 +1,2 @@
+module GameModesHelper
+end
