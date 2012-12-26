@@ -1,11 +1,25 @@
 ItekakoDarts::Application.routes.draw do
-  get "games/new"
+# get "static_pages/new"
 
-  get "game_modes/new"
+# get "games/new"
 
-  get "coeficients/new"
+# get "game_modes/new"
 
-  get "players/new"
+# get "coeficients/new"
+
+# get "players/new"
+
+  # Itk routers
+
+ # match "/players", :to => "players#index"
+
+  root :to => "static_pages#index"
+  match "/players", :to => "static_pages#players"
+  match "/positioning", :to => "static_pages#positioning"
+  match "/participants", :to => "static_pages#participants"
+  match "/game_mode", :to => "static_pages#game_mode"
+  match "/results", :to => "static_pages#results"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

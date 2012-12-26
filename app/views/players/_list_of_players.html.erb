@@ -1,0 +1,9 @@
+<div class="player_list">
+	<% if not @players.blank? %>
+		<% @players.each do |player|%>
+			<%= player.name%>
+		<% end %>
+	<% else %>
+		<h2>No players.</h2>
+	<% end %>
+</div>
