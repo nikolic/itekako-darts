@@ -11,15 +11,16 @@ ItekakoDarts::Application.routes.draw do
 
   # Itk routers
 
- # match "/players", :to => "players#index"
+  match "/players", :to => "players#index"
 
   root :to => "static_pages#index"
-  match "/players", :to => "static_pages#players"
+  #match "/players", :to => "static_pages#players"
+  match "/players", :to => "players#index"
   match "/positioning", :to => "static_pages#positioning"
   match "/participants", :to => "static_pages#participants"
   match "/game_mode", :to => "static_pages#game_mode"
   match "/results", :to => "static_pages#results"
-
+  match "/create_game", :to => "games#create_game"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

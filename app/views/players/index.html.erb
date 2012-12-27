@@ -1,3 +1,6 @@
-<h1>Player list:</h1>
 
-<%= render "players/list_of_players" %>
+<%= form_tag("/create_game") do  %>
+	<%= render "players/list_of_players" %>
+	<%= submit_tag("Submit") %>
+<% end %>
+
