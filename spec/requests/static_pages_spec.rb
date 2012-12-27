@@ -1,11 +1,26 @@
 require 'spec_helper'
 
 describe "StaticPages" do
-  describe "GET /static_pages" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get static_pages_index_path
-      response.status.should be(200)
-    end
-  end
+	subject { page }
+
+	url_helpers = Rails.application.routes.url_helpers
+
+	path_maps = {
+		url_helpers.root_path => "Home Page",
+		url_helpers.players_path => "Players",
+		url_helpers.game_mode_path => "Game Mode",
+		url_helpers.participants_path => "Participants",
+		url_helpers.positioning_path => "Positioning",
+		url_helpers.results_path => "Results"
+	}
+
+	path_maps.each do |path, title|
+		describe "Visiting path " + path do
+			before do
+				visit path
+			end
+
+			it { should have_selector 'title', :text => title }
+		end
+	end
 end

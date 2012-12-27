@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
 	def index
-		@title = "Home page"
+		@title = "Home Page"
 	end
 
 
@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
 
 
 	def game_mode
-		@title = "Game mode"
+		@title = "Game Mode"
 	end
 
 
