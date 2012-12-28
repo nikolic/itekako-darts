@@ -1,31 +1,31 @@
 class StaticPagesController < ApplicationController
 
-	def index
-		@title = "Home Page"
-	end
+  def index
+    @title = "Home Page"
+  end
 
 
-	def players
-		@title = "Players"
-	end
+  def players
+    @title = "Players"
+  end
 
 
-	def game_mode
-		@title = "Game Mode"
-	end
+  def game_mode
+    @title = "Game Mode"
+  end
 
 
-	def participants
-		@title = "Participants"
-	end
+  def participants
+    @title = "Participants"
+  end
 
 
-	def positioning
-		@title = "Positioning"
-	end
+  def positioning
+    @title = "Positioning"
+  end
 
 
-	def results
-		@title = "Results"
-	end
+  def results
+    @title = "Results"
+  end
 end

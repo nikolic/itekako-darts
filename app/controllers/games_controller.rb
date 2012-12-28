@@ -4,14 +4,14 @@ class GamesController < ApplicationController
  
     player_ids = params[:players]
 
-  	if not player_ids.blank? 
-  		game = Game.create()
-  		Participation.create_participations(game.id, player_ids)
-  		redirect_to :controller => 'games', :action => 'index'
-  	else
-  		redirect_to :controller => 'games', :action => 'options'
-  	end 
-  		
+    if not player_ids.blank? 
+      game = Game.create()
+      Participation.create_participations(game.id, player_ids)
+      redirect_to :controller => 'games', :action => 'index'
+    else
+      redirect_to :controller => 'games', :action => 'options'
+    end 
+      
   end
 
   def show
@@ -19,7 +19,7 @@ class GamesController < ApplicationController
   end
 
   def options
-    @players = Player.get_all_players
+    @players = Player.all
     
   end
 

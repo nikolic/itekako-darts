@@ -1,12 +1,12 @@
 <h1>Player list:</h1>
 <div class="player_list">
-	<ul>
-		<% if not @players.blank? %>
-			<% @players.each do |player|%>
-				<li><input type="checkbox" name="players[]" value=<%=player.id %> /> <%= player.name%></li>
-			<% end %>
-		<% else %>
-			<li>No players.</li>
-		<% end %>
-	</ul>
+  <ul>
+    <% if not @players.blank? %>
+      <% @players.each do |player|%>
+        <li><input type="checkbox" name="players[]" value=<%=player.id %> /> <%= player.name%></li>
+      <% end %>
+    <% else %>
+      <li>No players.</li>
+    <% end %>
+  </ul>
 </div>
