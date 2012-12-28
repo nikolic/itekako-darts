@@ -16,7 +16,7 @@ class GamesController < ApplicationController
 
 
   def options
-    @players = Player.get_all_players   
+    @players = Player.all
   end
 
 
