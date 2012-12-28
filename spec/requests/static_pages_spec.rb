@@ -4,6 +4,8 @@ describe "StaticPages" do
 
   subject { page }
 
+  test_players_num = 12;
+
   # url_helpers = Rails.application.routes.url_helpers
 
   # path_maps = {
@@ -59,7 +61,7 @@ describe "StaticPages" do
     it_should_behave_like "all_static_pages"
 
     describe "list of players" do
-      before(:all) { 10.times { FactoryGirl.create(:player) } }
+      before(:all) { test_players_num.times { FactoryGirl.create(:player) } }
       after(:all)  { Player.delete_all }
 
       it "should list all players" do

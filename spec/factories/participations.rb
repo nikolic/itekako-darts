@@ -5,5 +5,6 @@ FactoryGirl.define do
     player_id 1
     game_id 1
     position 1
+    team 1
   end
 end

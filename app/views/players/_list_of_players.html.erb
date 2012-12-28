@@ -3,7 +3,7 @@
   <ul>
     <% if not @players.blank? %>
       <% @players.each do |player|%>
-        <li><input type="checkbox" name="players[]" value=<%=player.id %> /> <%= player.name%></li>
+        <li><input id="player_<%= player.id %>" type="checkbox" name="players[]" value=<%=player.id %> /> <%= player.name%></li>
       <% end %>
     <% else %>
       <li>No players.</li>

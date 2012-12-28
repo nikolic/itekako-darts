@@ -3,5 +3,6 @@
 FactoryGirl.define do
   factory :coeficient do
     value 1
+    active true
   end
 end
