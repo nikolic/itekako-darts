@@ -1,7 +1,6 @@
 <%= provide :title, "Game Options" %>
 
 <%= form_tag :controller => "games", :action => "create" do  %>
-  <%= render "players/list_of_players" %>
-  <%= render "games/select_mode"%>
-  <%= submit_tag("Submit") %>
+	<%= render "players/list_of_players" %>
+	<%= submit_tag("Submit") %>
 <% end %>
