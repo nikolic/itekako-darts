@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "StaticPages" do
-
   subject { page }
 
   test_players_num = 12;
@@ -26,7 +25,6 @@ describe "StaticPages" do
   #     it { should have_selector 'title', :text => title }
   #   end
   # end
-
   #******************************************************************************
   # Shared Tests
   #******************************************************************************
@@ -99,5 +97,6 @@ describe "StaticPages" do
     it "should have link back to 'Home Page'" do
       should have_link 'Done', :href => root_path
     end
+    
   end
 end

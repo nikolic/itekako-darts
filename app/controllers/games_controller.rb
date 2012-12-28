@@ -11,6 +11,7 @@ class GamesController < ApplicationController
   	else
   		redirect_to :controller => 'games', :action => 'options'
   	end 
+
   end
 
 
