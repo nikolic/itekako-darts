@@ -1,5 +1,5 @@
 class Participation < ActiveRecord::Base
-  attr_accessible :game_id, :player_id, :position
+	attr_accessible :game_id, :player_id, :position
 
 	def self.create_participations(game_id, player_ids)
 		# to do validation

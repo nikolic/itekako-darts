@@ -28,5 +28,4 @@ class StaticPagesController < ApplicationController
 	def results
 		@title = "Results"
 	end
-
 end

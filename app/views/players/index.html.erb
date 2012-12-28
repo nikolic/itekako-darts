@@ -1,5 +1,5 @@
 
-<%= form_tag("/create_game") do  %>
+<%= form_tag({:controller => 'games', :action => 'options'}) do  %>
 	<%= render "players/list_of_players" %>
 	<%= submit_tag("Submit") %>
 <% end %>

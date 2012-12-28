@@ -1,17 +1,16 @@
 ItekakoDarts::Application.routes.draw do
-# get "static_pages/new"
+  # get "static_pages/new"
 
-# get "games/new"
+  # get "games/new"
 
-# get "game_modes/new"
+  # get "game_modes/new"
 
-# get "coeficients/new"
+  # get "coeficients/new"
 
-# get "players/new"
+  # get "players/new"
 
   # Itk routers
 
-  match "/players", :to => "players#index"
 
   root :to => "static_pages#index"
   #match "/players", :to => "static_pages#players"
@@ -20,7 +19,8 @@ ItekakoDarts::Application.routes.draw do
   match "/participants", :to => "static_pages#participants"
   match "/game_mode", :to => "static_pages#game_mode"
   match "/results", :to => "static_pages#results"
-  match "/create_game", :to => "games#create_game"
+  match "/create_game", :to => "games#create"
+  match "/options", :to => "games#options"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -77,5 +77,5 @@ ItekakoDarts::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+# match ':controller(/:action(/:id))(.:format)'
 end
