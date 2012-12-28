@@ -21,6 +21,7 @@ ItekakoDarts::Application.routes.draw do
   match "/results", :to => "static_pages#results"
   match "/create_game", :to => "games#create"
   match "/options", :to => "games#options"
+  match "/game", :to => "games#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
