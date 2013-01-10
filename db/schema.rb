@@ -11,11 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121226121154) do
+ActiveRecord::Schema.define(:version => 20121228165029) do
 
   create_table "coeficients", :force => true do |t|
     t.integer  "value"
     t.boolean  "active"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "games", :force => true do |t|
+    t.integer  "coeficient_id"
+    t.integer  "number_of_players"
+    t.boolean  "doubles"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "participations", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "game_id"
+    t.integer  "position"
+    t.integer  "team"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

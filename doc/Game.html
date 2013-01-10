@@ -1,0 +1,2049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Game
+  
+    &mdash; Documentation by YARD 0.8.3
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (G)</a> &raquo;
+    
+    
+    <span class="title">Game</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Game
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">ActiveRecord::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next">Game</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/models/game.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Game Model for storing game information</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#coeficient_id-instance_method" title="#coeficient_id (instance method)">- (Integer) <strong>coeficient_id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ID of the referent coeficient.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#created_at-instance_method" title="#created_at (instance method)">- (DateTime) <strong>created_at</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Timestamp when the game was created.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#doubles-instance_method" title="#doubles (instance method)">- (Boolean) <strong>doubles</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Is the game played in two=player team mode.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#number_of_players-instance_method" title="#number_of_players (instance method)">- (Integer) <strong>number_of_players</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Number of the players in a game.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#updated_at-instance_method" title="#updated_at (instance method)">- (DateTime) <strong>updated_at</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Timestamp when the game was last updated.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_new-class_method" title="start_new (class method)">+ (Game) <strong>start_new</strong>(doubles, players) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new game.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_players-instance_method" title="#add_players (instance method)">- (Object) <strong>add_players</strong>(players) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds players to the game.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#get_particpations-instance_method" title="#get_particpations (instance method)">- (Object) <strong>get_particpations</strong> {|participation| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets participations for this game.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_player_list-instance_method" title="#get_player_list (instance method)">- (Array&lt;Player&gt;) <strong>get_player_list</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets players order list for a game instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_players-instance_method" title="#get_players (instance method)">- (Array&lt;Player&gt;) <strong>get_players</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets all players in this game.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_team-instance_method" title="#get_team (instance method)">- (Array&lt;Player&gt;) <strong>get_team</strong>(team) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets players of a specific team in game instace.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_team_list-instance_method" title="#get_team_list (instance method)">- (Array&lt;Player&gt;) <strong>get_team_list</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets list of teams.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#info-instance_method" title="#info (instance method)">- (Hash) <strong>info</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets general information about this game instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#number_of_teams-instance_method" title="#number_of_teams (instance method)">- (Integer) <strong>number_of_teams</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the number of teams in a game.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#pair_players-instance_method" title="#pair_players (instance method)">- (Object) <strong>pair_players</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Pairs players into two-player teams.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#position_players-instance_method" title="#position_players (instance method)">- (Object) <strong>position_players</strong>(players) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>Use <span class='object_link'><a href="#position_teams-instance_method" title="Game#position_teams (method)">#position_teams</a></span> instead</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#position_teams-instance_method" title="#position_teams (instance method)">- (Object) <strong>position_teams</strong>(teams) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets team positionig in game.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#shuffle_teams-instance_method" title="#shuffle_teams (instance method)">- (Object) <strong>shuffle_teams</strong> {|Integer| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Yields shuffled teams.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#team_position-instance_method" title="#team_position (instance method)">- (Integer) <strong>team_position</strong>(team) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a position of a team in a game instance.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="coeficient_id=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="coeficient_id-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>coeficient_id</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ID of the referent coeficient</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the current value of coeficient_id</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_coeficient_id'>coeficient_id</span>
+  <span class='ivar'>@coeficient_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="created_at=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="created_at-instance_method">
+  
+    - (<tt>DateTime</tt>) <strong>created_at</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Timestamp when the game was created</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>DateTime</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the current value of created_at</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_created_at'>created_at</span>
+  <span class='ivar'>@created_at</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="doubles=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="doubles-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>doubles</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Is the game played in two=player team mode</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the current value of doubles</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_doubles'>doubles</span>
+  <span class='ivar'>@doubles</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="number_of_players=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="number_of_players-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>number_of_players</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Number of the players in a game</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the current value of number_of_players</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_number_of_players'>number_of_players</span>
+  <span class='ivar'>@number_of_players</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="updated_at=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="updated_at-instance_method">
+  
+    - (<tt>DateTime</tt>) <strong>updated_at</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Timestamp when the game was last updated</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>DateTime</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the current value of updated_at</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_updated_at'>updated_at</span>
+  <span class='ivar'>@updated_at</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="start_new-class_method">
+  
+    + (<tt><span class='object_link'><a href="" title="Game (class)">Game</a></span></tt>) <strong>start_new</strong>(doubles, players) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a new game</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>doubles</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Is the game played in two-player team mode</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>players</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of players</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Game (class)">Game</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The new Game object instance</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_start_new'>start_new</span><span class='lparen'>(</span><span class='id identifier rubyid_doubles'>doubles</span><span class='comma'>,</span> <span class='id identifier rubyid_players'>players</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_coef'>coef</span> <span class='op'>=</span> <span class='const'>Coeficient</span><span class='period'>.</span><span class='id identifier rubyid_find_by_active'>find_by_active</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_game'>game</span> <span class='op'>=</span> <span class='const'>Game</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span>
+      <span class='symbol'>:coeficient_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_coef'>coef</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+      <span class='symbol'>:number_of_players</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span>
+      <span class='symbol'>:doubles</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_doubles'>doubles</span>
+    <span class='rparen'>)</span>
+  <span class='id identifier rubyid_game'>game</span><span class='period'>.</span><span class='id identifier rubyid_add_players'>add_players</span> <span class='id identifier rubyid_players'>players</span>
+  <span class='id identifier rubyid_game'>game</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_players-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_players</strong>(players) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>this method calls the <span class='object_link'><a href="#pair_players-instance_method" title="Game#pair_players (method)">#pair_players</a></span> method if game is in doubles mode</p>
+</div>
+  </div>
+
+
+<p>Adds players to the game</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>players</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of players</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if players array is empty or nil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_players'>add_players</span><span class='lparen'>(</span><span class='id identifier rubyid_players'>players</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_players'>players</span> <span class='op'>||</span> <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>There must be at least one player in a game</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='const'>Participation</span><span class='period'>.</span><span class='id identifier rubyid_create_participations'>create_participations</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_players'>players</span>
+  <span class='id identifier rubyid_pair_players'>pair_players</span> <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_doubles'>doubles</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_particpations-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_particpations</strong> {|participation| ... } <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets participations for this game</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>participation</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Participation.html" title="Participation (class)">Participation</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Participation found for this game</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+177
+178
+179
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 177</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_particpations'>get_particpations</span>
+  <span class='id identifier rubyid_participations'>participations</span> <span class='op'>=</span> <span class='const'>Participation</span><span class='period'>.</span><span class='id identifier rubyid_find_all_by_game_id'>find_all_by_game_id</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+  <span class='id identifier rubyid_participations'>participations</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_participation'>participation</span><span class='op'>|</span>
+    <span class='kw'>yield</span> <span class='id identifier rubyid_participation'>participation</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_player_list-instance_method">
+  
+    - (<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>) <strong>get_player_list</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets players order list for a game instance</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of players</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_player_list'>get_player_list</span>
+  <span class='id identifier rubyid_list'>list</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_teams'>teams</span> <span class='op'>=</span> <span class='id identifier rubyid_shuffle_teams'>shuffle_teams</span>
+  <span class='id identifier rubyid_teams'>teams</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_team'>team</span><span class='op'>|</span>
+    <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_team'>get_team</span><span class='lparen'>(</span><span class='id identifier rubyid_team'>team</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_doubles'>doubles</span>
+    <span class='id identifier rubyid_teams'>teams</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_team'>team</span><span class='op'>|</span>
+      <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_team'>get_team</span><span class='lparen'>(</span><span class='id identifier rubyid_team'>team</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_list'>list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_players-instance_method">
+  
+    - (<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>) <strong>get_players</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets all players in this game</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of players</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150
+151
+152
+153
+154</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 148</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_players'>get_players</span>
+  <span class='id identifier rubyid_players'>players</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get_particpations'>get_particpations</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_participation'>participation</span><span class='op'>|</span>
+    <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='const'>Player</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_participation'>participation</span><span class='period'>.</span><span class='id identifier rubyid_player_id'>player_id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_players'>players</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_team-instance_method">
+  
+    - (<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>) <strong>get_team</strong>(team) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets players of a specific team in game instace</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>team</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Team number</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of players</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_team'>get_team</span><span class='lparen'>(</span><span class='id identifier rubyid_team'>team</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_players'>players</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get_particpations'>get_particpations</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_participation'>participation</span><span class='op'>|</span>
+    <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='const'>Player</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_participation'>participation</span><span class='period'>.</span><span class='id identifier rubyid_player_id'>player_id</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_participation'>participation</span><span class='period'>.</span><span class='id identifier rubyid_team'>team</span> <span class='op'>==</span> <span class='id identifier rubyid_team'>team</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_players'>players</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_team_list-instance_method">
+  
+    - (<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>) <strong>get_team_list</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets list of teams</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of players</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_team_list'>get_team_list</span>
+  <span class='id identifier rubyid_list'>list</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_teams'>teams</span> <span class='op'>=</span> <span class='id identifier rubyid_shuffle_teams'>shuffle_teams</span>
+  <span class='id identifier rubyid_teams'>teams</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_team'>team</span><span class='op'>|</span>
+    <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_team'>get_team</span> <span class='id identifier rubyid_team'>team</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_list'>list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="info-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>info</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets general information about this game instance</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A hash with some basic info about the game instace</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_info'>info</span>
+	<span class='id identifier rubyid_coef'>coef</span> <span class='op'>=</span> <span class='const'>Coeficient</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_coeficient_id'>coeficient_id</span><span class='rparen'>)</span>
+  <span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>id</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number_of_players</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_number_of_players'>number_of_players</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>doubles</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_doubles'>doubles</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>coeficient</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_coef'>coef</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="number_of_teams-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>number_of_teams</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets the number of teams in a game</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Number of teams in a game. Depends of the game's  <span class='object_link'><a href="#doubles-instance_method" title="Game#doubles (method)">#doubles</a></span> attribute</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_number_of_teams'>number_of_teams</span>
+  <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_doubles'>doubles</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_number_of_players'>number_of_players</span><span class='op'>/</span><span class='int'>2</span>
+  <span class='kw'>else</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_number_of_players'>number_of_players</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pair_players-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pair_players</strong>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Pairs players into two-player teams</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 185</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pair_players'>pair_players</span>
+  <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_number_of_players'>number_of_players</span> <span class='op'>%</span> <span class='int'>2</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_number_of_teams'>number_of_teams</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_number_of_players'>number_of_players</span> <span class='op'>/</span> <span class='int'>2</span>
+    <span class='id identifier rubyid_teams'>teams</span> <span class='op'>=</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_number_of_teams'>number_of_teams</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_players'>players</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_players'>get_players</span>
+
+    <span class='kw'>while</span> <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_team_mates'>team_mates</span> <span class='op'>=</span> <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_sample'>sample</span> <span class='int'>2</span>
+      <span class='id identifier rubyid_team'>team</span> <span class='op'>=</span> <span class='id identifier rubyid_teams'>teams</span><span class='period'>.</span><span class='id identifier rubyid_sample'>sample</span>
+      <span class='id identifier rubyid_teams'>teams</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_team'>team</span>
+      <span class='id identifier rubyid_team_mates'>team_mates</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_mate'>mate</span><span class='op'>|</span>
+        <span class='id identifier rubyid_part'>part</span> <span class='op'>=</span> <span class='const'>Participation</span><span class='period'>.</span><span class='id identifier rubyid_get_for'>get_for</span><span class='lparen'>(</span><span class='id identifier rubyid_mate'>mate</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_part'>part</span><span class='period'>.</span><span class='id identifier rubyid_team'>team</span> <span class='op'>=</span> <span class='id identifier rubyid_team'>team</span>
+        <span class='id identifier rubyid_part'>part</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+        <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_mate'>mate</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="position_players-instance_method">
+  
+    - (<tt>Object</tt>) <strong>position_players</strong>(players) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>Use <span class='object_link'><a href="#position_teams-instance_method" title="Game#position_teams (method)">#position_teams</a></span> instead</p>
+</div></div>
+
+<p>Sets team positionig in game</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>players</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of players. Order of players within the  array determens the
+positioning order</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_position_players'>position_players</span><span class='lparen'>(</span><span class='id identifier rubyid_players'>players</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_players'>players</span> <span class='op'>||</span> <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>There must be at least one player to position</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_player'>player</span><span class='op'>|</span>
+    <span class='id identifier rubyid_player'>player</span><span class='period'>.</span><span class='id identifier rubyid_set_position_in_game'>set_position_in_game</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_position'>position</span>
+    <span class='id identifier rubyid_position'>position</span><span class='op'>+=</span><span class='int'>1</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="position_teams-instance_method">
+  
+    - (<tt>Object</tt>) <strong>position_teams</strong>(teams) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets team positionig in game</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>teams</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of teams. Order of team numbers within the  array determens the
+positioning order</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_position_teams'>position_teams</span><span class='lparen'>(</span><span class='id identifier rubyid_teams'>teams</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_teams'>teams</span> <span class='op'>||</span> <span class='id identifier rubyid_teams'>teams</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>There must be at least one team to position</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_teams'>teams</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+    <span class='id identifier rubyid_players'>players</span> <span class='op'>=</span> <span class='id identifier rubyid_get_team'>get_team</span> <span class='id identifier rubyid_t'>t</span>
+    <span class='id identifier rubyid_players'>players</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_player'>player</span><span class='op'>|</span>
+      <span class='id identifier rubyid_player'>player</span><span class='period'>.</span><span class='id identifier rubyid_set_position_in_game'>set_position_in_game</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_position'>position</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_position'>position</span><span class='op'>+=</span><span class='int'>1</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="shuffle_teams-instance_method">
+  
+    - (<tt>Object</tt>) <strong>shuffle_teams</strong> {|Integer| ... } <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Yields shuffled teams</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Team number</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 208</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shuffle_teams'>shuffle_teams</span>
+  <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_number_of_teams'>number_of_teams</span><span class='rparen'>)</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_index'>index</span><span class='op'>|</span> <span class='id identifier rubyid_index'>index</span><span class='op'>+</span><span class='int'>1</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_shuffle'>shuffle</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="team_position-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>team_position</strong>(team) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets a position of a team in a game instance</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>team</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Team number</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Position of a team in a game instance</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/game.rb', line 160</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_team_position'>team_position</span><span class='lparen'>(</span><span class='id identifier rubyid_team'>team</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_get_particpations'>get_particpations</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_participation'>participation</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_participation'>participation</span><span class='period'>.</span><span class='id identifier rubyid_team'>team</span> <span class='op'>==</span> <span class='id identifier rubyid_team'>team</span>
+      <span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='id identifier rubyid_participation'>participation</span><span class='period'>.</span><span class='id identifier rubyid_position'>position</span>
+      <span class='kw'>break</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_position'>position</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Jan 10 09:48:02 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.3 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

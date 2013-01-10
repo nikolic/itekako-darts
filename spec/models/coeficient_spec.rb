@@ -1,23 +1,34 @@
+# == Schema Information
+#
+# Table name: coeficients
+#
+#  id         :integer          not null, primary key
+#  value      :integer
+#  active     :boolean
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Coeficient do
   before do
-  	let(:coef) {FactoryGirl.create :coficient}
+  	@coef = FactoryGirl.create :coeficient
   end
 
-  subject { coef }
+  subject { @coef }
 
   describe "Check validation" do
     it { should be_valid }
   end
 
-  player_fields = [
+  coeficient_fields = [
       :value,
       :active
     ]
 
   describe "Check fields" do
-    player_fields.each do |field|
+    coeficient_fields.each do |field|
   	  it { should respond_to field}
     end
   end

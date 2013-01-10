@@ -1,39 +1,47 @@
+# == Schema Information
+#
+# Table name: participations
+#
+#  id         :integer          not null, primary key
+#  player_id  :integer
+#  game_id    :integer
+#  position   :integer
+#  team       :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Participation do
   before do
-  	let(:player) do
-      FactoryGirl.new :player
-    end
+  	@player = FactoryGirl.create :player
 
-    let(:game) do
-      FactoryGirl.new :game
-    end
+    @game = FactoryGirl.create :game
 
-    let(:participation) do
-      Participation.new(
-          :player_id => player.id,
-          :game_id => game.id,
-          :team => 1,
-          :position => 1
-        )
-    end
+    @participation = Participation.new(
+        :player_id => @player.id,
+        :game_id => @game.id,
+        :team => 1,
+        :position => 1
+      )
   end
 
-  subject { participation }
+  subject { @participation }
 
   describe "Check validation" do
     it { should be_valid }
   end
 
-  player_fields = [
-      :number_of_players,
-      :coefs,
-      :doubles
+  participation_fields = [
+      :player_id,
+      :game_id,
+      :team,
+      :position
     ]
 
   describe "Check fields" do
-    player_fields.each do |field|
+    participation_fields.each do |field|
       it { should respond_to field}
     end
   end  

@@ -1,4 +1,27 @@
 <%= provide :title, "Game" %>
-<h2> Game </h2>
-
-<h2><%= @game.id %></h2>
+<h2>Game <%= @game.id %>, <%= "Doubles" if @game.doubles %></h2>
+<div>
+  <h3>Order of play</h3>
+  <ol>
+    <% @game.get_player_list.each do |player| %>
+      <li><%= player.name %> (<%= player.get_team @game %>)</li>
+    <% end %>
+  </ol>
+</div>
+<div>
+  <h3>Game table</h3>
+  <ol>
+    <% @game.get_team_list.each do |team| %>
+      <li>
+        <%= team[0].name %>
+        <% if @game.doubles %>
+          , <%= team[1].name %>
+        <% end %>
+        (<%= team[0].get_team @game %>)
+      </li>
+    <% end %>
+  </ol>  
+</div>
+<%= link_to "Reshuffle", 
+  "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
+<%= link_to "Done", results_path %>

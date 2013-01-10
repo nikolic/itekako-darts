@@ -1,19 +1,28 @@
 class GamesController < ApplicationController
 
   def create
- 
+    # game = Game.create()
     player_ids = params[:players]
+    doubles = false
+    redir = {:controller => 'games', :action => 'options'}
 
-  	if not player_ids.blank? 
-  		game = Game.create()
-  		Participation.create_participations(game.id, player_ids)
-  		redirect_to :controller => 'games', :action => 'index', :id => game.id
-  	else
-  		redirect_to :controller => 'games', :action => 'options'
-  	end 
-
+    if not player_ids.blank?
+      players = []
+      player_ids.each do |id|
+        players.push Player.find(id)
+      end
+    end
+    begin
+      doubles = true if params[:post][:category] == "1"
+      game = Game.start_new doubles, players
+      Participation.create_participations(game, players)
+      redir = {:controller => 'games', :action => 'index', :id => game.id}
+    rescue Exception => e
+      puts "ERROR! >>> #{e.message}"
+      flash[:error] = e.message
+    end
+    redirect_to redir
   end
-
 
   def options
     @players = Player.all
@@ -21,8 +30,7 @@ class GamesController < ApplicationController
 
 
   def index
-    game_id = params[:id]
-    @game = Game.find(game_id)
+    @game = Game.find params[:id]
   end
 
 
