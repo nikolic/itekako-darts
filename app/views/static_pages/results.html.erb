@@ -1,3 +1,19 @@
 <%= provide :title, "Results" %>
 <h1>Results</h1>
+<ol>
+  <%
+    participants = []
+    if @game
+      participants = @game.get_players
+    end
+   %>
+   <% @players.each do |player|%>
+     <li>
+       <%= player.name %> | <%= player.points %>
+       <% if participants.include? player %>
+         <%= "<" %>
+       <% end %>
+     </li>
+   <% end %>
+</ol>
 <%= link_to "Done", root_path %>

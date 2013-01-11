@@ -33,6 +33,13 @@ class GamesController < ApplicationController
     @game = Game.find params[:id]
   end
 
+  def calculate
+    @game = Game.find(params[:game_id])
+    teams = params[:team_id]
+    @game.position_teams teams
+
+    redirect_to results_path :game_id => params[:game_id]
+  end
 
   def show
     

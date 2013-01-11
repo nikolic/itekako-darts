@@ -39,15 +39,6 @@ class Participation < ActiveRecord::Base
     end
   end
 
-  # def self.get_all_players(game)
-  #   participations = Participation.find_all_by_game_id(game.id)
-  #   players = []
-  #   participations.each do |participation|
-  #     players.push Player.find(participation.player_id)
-  #   end
-  #   players
-  # end
-
   # Gets a Participation object for a Game- Player pair
   # 
   # @param [Player] player Player for which the participation is requested

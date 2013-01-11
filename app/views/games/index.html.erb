@@ -9,19 +9,25 @@
   </ol>
 </div>
 <div>
-  <h3>Game table</h3>
-  <ol>
-    <% @game.get_team_list.each do |team| %>
-      <li>
-        <%= team[0].name %>
-        <% if @game.doubles %>
-          , <%= team[1].name %>
-        <% end %>
-        (<%= team[0].get_team @game %>)
-      </li>
-    <% end %>
-  </ol>  
+  <%= form_tag :controller => "games", :action => "calculate", :method => "post" do  %>
+    <%= hidden_field_tag "game_id", @game.id %>
+    <h3>Game table</h3>
+    <ol>
+      <% team_id = 1 %>
+      <% @game.get_team_list.each do |team| %>
+        <%= hidden_field_tag "team_id[]", team_id %>
+        <% team_id += 1 %>
+        <li>
+          <%= team[0].name %>
+          <% if @game.doubles %>
+            , <%= team[1].name %>
+          <% end %>
+          (<%= team[0].get_team @game %>)
+        </li>
+      <% end %>
+    </ol> 
+    <%= submit_tag("Done") %>
+  <% end %> 
 </div>
 <%= link_to "Reshuffle", 
   "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
-<%= link_to "Done", results_path %>

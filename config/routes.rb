@@ -22,6 +22,7 @@ ItekakoDarts::Application.routes.draw do
   match "/create_game", :to => "games#create"
   match "/options", :to => "games#options"
   match "/game", :to => "games#index"
+  match "/calculate", :to => "games#calculate"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

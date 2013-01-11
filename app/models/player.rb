@@ -81,6 +81,15 @@ class Player < ActiveRecord::Base
     points
   end
 
+  def points_this_month
+    points = 0
+    games = games_this_month
+    games.each do |game|
+      points += self.points game
+    end
+    points
+  end
+
   # Gets the points this player has to date or in a certin game
   # 
   # @param [Game] game Game for which the points are calculated. 
@@ -93,6 +102,7 @@ class Player < ActiveRecord::Base
       coeficient = Coeficient.find(game.coeficient_id)
       get_participation_by_game game do |participation|
         opponents = get_opponents(game)
+
         points = points_formula(
             coeficient.value,
             game.number_of_teams,
@@ -106,7 +116,7 @@ class Player < ActiveRecord::Base
         coeficient = Coeficient.find(game.coeficient_id)
         opponents = get_opponents(game)
 
-        points += points_formula(
+        points = points_formula(
             coeficient.value,
             game.number_of_teams,
             participation.position,
@@ -172,6 +182,27 @@ class Player < ActiveRecord::Base
 
   private
 
+    def games_this_month
+      games =[]
+      participations = Participation.find_all_by_player_id_and_created_at(
+          self.id,
+          (DateTime.now.beginning_of_month..DateTime.now)
+        )
+      participations.each do |participation|
+        games.push Game.find participation.game_id
+      end
+      games
+    end
+
+    def games
+      games =[]
+      participations = Participation.find_all_by_player_id self.id
+      participations.each do |participation|
+        games.push Game.find participation.game_id
+      end
+      games
+    end
+
     # Private method for getting the participation information 
     #   about the player in a game
     # 
@@ -198,13 +229,17 @@ class Player < ActiveRecord::Base
     # @param [Array<Player>] opponents Array of players opponents
     # @return [Float] Points player has earned in a particular game as defined by
     def points_formula(coeficient,number_of_teams,position, opponents)
+      if position == 0
+        return 0
+      end
       opponent_rating = 0
       opponents.each do |opponent|
         opponent_rating += opponent.rating
       end
       opponent_rating /= Player.all_ratings
-    	(
+    	p = (
         coeficient.to_f * number_of_teams.to_f / position * opponent_rating.to_f
       ).round 2
+      p*100
     end
 end

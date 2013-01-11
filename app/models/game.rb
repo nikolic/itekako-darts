@@ -64,7 +64,7 @@ class Game < ActiveRecord::Base
     end
     position = 1
     teams.each do |t|
-      players = get_team t
+      players = get_team t.to_i
       players.each do |player|
         player.set_position_in_game self, position
       end
